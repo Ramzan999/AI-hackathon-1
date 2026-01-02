@@ -1,0 +1,58 @@
+<svg width="900" height="500" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .vision { fill: #4CAF50; stroke: #388E3C; stroke-width: 2; }
+    .language { fill: #2196F3; stroke: #0D47A1; stroke-width: 2; }
+    .action { fill: #FF9800; stroke: #F57C00; stroke-width: 2; }
+    .fusion { fill: #9C27B0; stroke: #7B1FA2; stroke-width: 2; }
+    .robot { fill: #795548; stroke: #5D4037; stroke-width: 2; }
+    .text { font-family: Arial, sans-serif; font-size: 14px; fill: white; text-anchor: middle; }
+    .label { font-family: Arial, sans-serif; font-size: 12px; fill: #333; text-anchor: middle; }
+  </style>
+
+  <!-- Vision Module -->
+  <rect class="vision" x="100" y="100" width="150" height="100" rx="15" ry="15"/>
+  <text class="text" x="175" y="140">Vision</text>
+  <text class="text" x="175" y="160">Processing</text>
+  <text class="label" x="175" y="185">CV Models</text>
+
+  <!-- Language Module -->
+  <rect class="language" x="100" y="250" width="150" height="100" rx="15" ry="15"/>
+  <text class="text" x="175" y="290">Language</text>
+  <text class="text" x="175" y="310">Understanding</text>
+  <text class="label" x="175" y="335">LLM Integration</text>
+
+  <!-- Fusion Module -->
+  <rect class="fusion" x="375" y="200" width="150" height="100" rx="15" ry="15"/>
+  <text class="text" x="450" y="240">Vision-</text>
+  <text class="text" x="450" y="260">Language</text>
+  <text class="text" x="450" y="280">Fusion</text>
+
+  <!-- Action Module -->
+  <rect class="action" x="650" y="200" width="150" height="100" rx="15" ry="15"/>
+  <text class="text" x="725" y="240">Action</text>
+  <text class="text" x="725" y="260">Planning</text>
+  <text class="text" x="725" y="280">& Execution</text>
+
+  <!-- Robot -->
+  <rect class="robot" x="650" y="350" width="150" height="80" rx="10" ry="10"/>
+  <text class="text" x="725" y="390">Robot</text>
+  <text class="text" x="725" y="410">Platform</text>
+
+  <!-- Data Flow Arrows -->
+  <line x1="250" y1="150" x2="375" y2="225" stroke="#000" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <line x1="250" y1="300" x2="375" y2="275" stroke="#000" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <line x1="525" y1="250" x2="650" y2="250" stroke="#000" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <line x1="725" y1="300" x2="725" y2="350" stroke="#000" stroke-width="2" marker-end="url(#arrowhead)"/>
+
+  <!-- Arrowhead definition -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#000" />
+    </marker>
+  </defs>
+
+  <!-- Labels -->
+  <text class="label" x="450" y="50">Vision-Language-Action System Architecture</text>
+  <text class="label" x="175" y="80">Perception Input</text>
+  <text class="label" x="725" y="450">Physical Action</text>
+</svg>

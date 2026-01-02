@@ -1,0 +1,45 @@
+<svg width="800" height="400" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .node { fill: #4CAF50; stroke: #388E3C; stroke-width: 2; }
+    .topic { fill: #2196F3; stroke: #0D47A1; stroke-width: 2; }
+    .text { font-family: Arial, sans-serif; font-size: 14px; fill: white; text-anchor: middle; }
+    .label { font-family: Arial, sans-serif; font-size: 12px; fill: #333; text-anchor: middle; }
+  </style>
+
+  <!-- Nodes -->
+  <rect class="node" x="100" y="50" width="120" height="60" rx="10" ry="10"/>
+  <text class="text" x="160" y="85">Node A</text>
+
+  <rect class="node" x="100" y="250" width="120" height="60" rx="10" ry="10"/>
+  <text class="text" x="160" y="285">Node B</text>
+
+  <rect class="node" x="580" y="150" width="120" height="60" rx="10" ry="10"/>
+  <text class="text" x="640" y="185">Node C</text>
+
+  <!-- Topics -->
+  <ellipse class="topic" cx="350" cy="100" rx="80" ry="30"/>
+  <text class="text" x="350" y="105">topic_1</text>
+
+  <ellipse class="topic" cx="350" cy="250" rx="80" ry="30"/>
+  <text class="text" x="350" y="255">topic_2</text>
+
+  <!-- Arrows -->
+  <line x1="220" y1="80" x2="270" y2="100" stroke="#000" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <line x1="270" y1="100" x2="270" y2="250" stroke="#000" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <line x1="270" y1="250" x2="220" y2="280" stroke="#000" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <line x1="580" y1="180" x2="430" y2="250" stroke="#000" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <line x1="430" y1="100" x2="580" y2="180" stroke="#000" stroke-width="2" marker-end="url(#arrowhead)"/>
+
+  <!-- Arrowhead definition -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#000" />
+    </marker>
+  </defs>
+
+  <!-- Labels -->
+  <text class="label" x="400" y="40">ROS 2 Architecture Diagram</text>
+  <text class="label" x="160" y="40">Publisher Nodes</text>
+  <text class="label" x="640" y="40">Subscriber Nodes</text>
+  <text class="label" x="350" y="350">Topics and Communication</text>
+</svg>

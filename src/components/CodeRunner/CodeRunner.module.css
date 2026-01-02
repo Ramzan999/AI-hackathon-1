@@ -1,0 +1,238 @@
+.codeRunnerContainer {
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  overflow: hidden;
+  margin: 1.5rem 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  background: white;
+}
+
+.codeRunnerHeader {
+  background: linear-gradient(135deg, #43cea2 0%, #185a9d 100%);
+  color: white;
+  padding: 1rem;
+}
+
+.codeRunnerTitle {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.codeRunnerIcon {
+  font-size: 1.2rem;
+}
+
+.codeRunnerDescription {
+  margin: 0;
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+
+.codeRunnerContent {
+  padding: 0;
+}
+
+.codeEditor {
+  margin: 1rem;
+}
+
+.editorToolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f8f9fa;
+  padding: 0.5rem 1rem;
+  border: 1px solid #ddd;
+  border-bottom: none;
+  border-radius: 4px 4px 0 0;
+}
+
+.languageTag {
+  background: #6c757d;
+  color: white;
+  padding: 0.25rem 0.5rem;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+.editorActions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.toolbarButton {
+  background: #6c757d;
+  color: white;
+  border: none;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.8rem;
+  transition: background 0.2s ease;
+}
+
+.toolbarButton:hover {
+  background: #5a6268;
+}
+
+.codeTextarea {
+  width: 100%;
+  min-height: 200px;
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-top: none;
+  border-radius: 0 0 4px 4px;
+  font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  resize: vertical;
+  tab-size: 2;
+}
+
+.codeOutput {
+  margin: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.outputHeader {
+  background: #f8f9fa;
+  padding: 0.5rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ddd;
+}
+
+.outputTitle {
+  font-weight: bold;
+  color: #495057;
+}
+
+.executionTime {
+  font-size: 0.8rem;
+  color: #6c757d;
+}
+
+.outputContent {
+  min-height: 100px;
+  padding: 1rem;
+  background: #1e1e1e;
+  color: #d4d4d4;
+  font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  white-space: pre-wrap;
+  overflow-x: auto;
+}
+
+.outputPlaceholder {
+  color: #888;
+  font-style: italic;
+}
+
+.codeRunnerControls {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  background: #f8f9fa;
+  border-top: 1px solid #e0e0e0;
+}
+
+.controlButton {
+  padding: 0.5rem 1rem;
+  border: 1px solid #ddd;
+  background: white;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.controlButton:hover {
+  background: #e9ecef;
+  border-color: #adb5bd;
+}
+
+.controlButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.runButton {
+  background: #28a745;
+  color: white;
+  border-color: #28a745;
+}
+
+.runButton:hover:not(:disabled) {
+  background: #218838;
+  border-color: #1e7e34;
+}
+
+.resetButton {
+  background: #6c757d;
+  color: white;
+  border-color: #6c757d;
+}
+
+.resetButton:hover {
+  background: #5a6268;
+  border-color: #545b62;
+}
+
+.codeRunnerStatus {
+  margin-left: auto;
+  font-size: 0.9rem;
+}
+
+.statusIndicator {
+  padding: 0.25rem 0.5rem;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  background: #d4edda;
+  color: #155724;
+}
+
+.codeRunnerInfo {
+  padding: 0 1rem 1rem 1rem;
+}
+
+.codeRunnerDetails {
+  cursor: pointer;
+}
+
+.codeRunnerDetailsContent {
+  margin-top: 0.5rem;
+  padding-top: 0.5rem;
+  border-top: 1px solid #eee;
+}
+
+.codeRunnerDetailsContent p {
+  margin: 0.5rem 0;
+}
+
+@media (max-width: 768px) {
+  .codeRunnerControls {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .editorToolbar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .editorActions {
+    align-self: flex-end;
+  }
+}

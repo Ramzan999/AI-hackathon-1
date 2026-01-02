@@ -1,0 +1,26 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm run build)",
+      "Bash(npx docusaurus serve --port 3001)",
+      "Bash(npx docusaurus serve --port 3002)",
+      "Bash(dir rag-chatbot-arch /s)",
+      "Bash(powershell \"Get-ChildItem -Path rag-chatbot-arch -Recurse\")",
+      "Bash(python -m venv venv)",
+      "Bash(pip --version)",
+      "Bash(dir venv)",
+      "Bash(venv\\\\Scripts\\\\activate)",
+      "Bash(pip install -r requirements.txt)",
+      "Bash(venv\\\\Scripts\\\\python.exe -m pip install -r requirements.txt)",
+      "Bash(./venv/Scripts/python.exe -m pip install -r requirements.txt)",
+      "Bash(./venv/Scripts/python.exe -m pip install qdrant-client python-dotenv openai tiktoken sentence-transformers transformers torch numpy)",
+      "Bash(./venv/Scripts/python.exe -m pip install:*)",
+      "Bash(./venv/Scripts/python.exe simple_embedding_test.py)",
+      "Bash(pip install qdrant-client python-dotenv)",
+      "Bash(copy .env.example .env)",
+      "Bash(pip install sentence-transformers)",
+      "Bash(dir)",
+      "Bash(npx docusaurus start --port 4000)"
+    ]
+  }
+}

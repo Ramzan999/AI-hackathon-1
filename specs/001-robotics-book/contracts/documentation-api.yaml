@@ -1,0 +1,129 @@
+# API Contract: Docusaurus Documentation Site
+
+## Documentation Endpoints
+
+### Module Content API
+**Purpose**: Retrieve module content for dynamic loading or external integration
+
+```
+GET /api/modules/{moduleId}
+```
+
+**Response**:
+```json
+{
+  "id": "ros2-nervous-system",
+  "title": "ROS 2 Nervous System",
+  "description": "Learn how ROS 2 serves as the nervous system for robots",
+  "pages": [
+    {
+      "id": "concepts",
+      "title": "Core Concepts",
+      "path": "/docs/ros2-nervous-system/concepts"
+    },
+    {
+      "id": "hands-on-lab",
+      "title": "Hands-on Lab",
+      "path": "/docs/ros2-nervous-system/hands-on-lab"
+    },
+    {
+      "id": "troubleshooting",
+      "title": "Troubleshooting",
+      "path": "/docs/ros2-nervous-system/troubleshooting"
+    }
+  ],
+  "learningObjectives": [
+    "Understand ROS 2 node communication patterns",
+    "Implement basic publisher-subscriber patterns",
+    "Debug common ROS 2 issues"
+  ]
+}
+```
+
+### Search API
+**Purpose**: Search across all documentation content
+
+```
+GET /api/search?q={query}&limit={limit}
+```
+
+**Response**:
+```json
+{
+  "results": [
+    {
+      "title": "ROS 2 Publisher Example",
+      "path": "/docs/ros2-nervous-system/hands-on-lab#publishers",
+      "excerpt": "Learn how to create a publisher node in ROS 2...",
+      "module": "ROS 2 Nervous System"
+    }
+  ],
+  "total": 1
+}
+```
+
+### Code Examples API
+**Purpose**: Retrieve code examples for interactive execution
+
+```
+GET /api/code-examples/{exampleId}
+```
+
+**Response**:
+```json
+{
+  "id": "minimal-publisher-python",
+  "language": "python",
+  "code": "import rclpy\nfrom rclpy.node import Node\n\nclass MinimalPublisher(Node):\n    def __init__(self):\n        super().__init__('minimal_publisher')\n        self.publisher = self.create_publisher(String, 'topic', 10)\n",
+  "description": "Basic ROS 2 publisher node in Python",
+  "dependencies": ["rclpy", "std_msgs"],
+  "moduleName": "ROS 2 Nervous System",
+  "page": "hands-on-lab"
+}
+```
+
+## Configuration Schema
+
+### Sidebar Configuration
+**File**: `sidebar.js`
+
+```json
+{
+  "type": "category",
+  "label": "Module Name",
+  "items": [
+    "relative/path/to/page",
+    {
+      "type": "link",
+      "label": "External Resource",
+      "href": "https://external-link.com"
+    }
+  ]
+}
+```
+
+### Site Configuration
+**File**: `docusaurus.config.js`
+
+```json
+{
+  "title": "Physical AI & Humanoid Robotics",
+  "tagline": "Bridging digital brains and physical bodies",
+  "url": "https://your-username.github.io",
+  "baseUrl": "/robotics-book/",
+  "organizationName": "your-username",
+  "projectName": "robotics-book",
+  "deploymentBranch": "gh-pages",
+  "presets": [
+    [
+      "@docusaurus/preset-classic",
+      {
+        "docs": {
+          "sidebarPath": require.resolve("./sidebars.js"),
+          "editUrl": "https://github.com/your-username/robotics-book/edit/main/"
+        }
+      }
+    ]
+  ]
+}
+```

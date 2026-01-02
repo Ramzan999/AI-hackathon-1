@@ -1,0 +1,317 @@
+.robotControlsContainer {
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  overflow: hidden;
+  margin: 1.5rem 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  background: white;
+}
+
+.controlsHeader {
+  background: linear-gradient(135deg, #6f42c1 0%, #e83e8c 100%);
+  color: white;
+  padding: 1rem;
+}
+
+.controlsTitle {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.controlsIcon {
+  font-size: 1.2rem;
+}
+
+.robotName {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  padding: 0.25rem 0.5rem;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  margin-left: auto;
+}
+
+.controlsDescription {
+  margin: 0;
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+
+.controlsContent {
+  padding: 1rem;
+}
+
+.modeSelector {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+
+.modeButton {
+  flex: 1;
+  min-width: 120px;
+  padding: 0.75rem;
+  border: 2px solid #dee2e6;
+  background: white;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.modeButton:hover {
+  border-color: #adb5bd;
+  background: #f8f9fa;
+}
+
+.modeButton.activeMode {
+  border-color: #6f42c1;
+  background: #6f42c1;
+  color: white;
+}
+
+.teleopControls {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.teleopPad {
+  display: grid;
+  grid-template-areas:
+    ". up ."
+    "left center right"
+    ". down .";
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.teleopButton {
+  width: 60px;
+  height: 60px;
+  border: 2px solid #dee2e6;
+  background: white;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1.5rem;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.teleopButton:hover {
+  background: #f8f9fa;
+  border-color: #adb5bd;
+}
+
+.teleopButton:active {
+  background: #e9ecef;
+  transform: scale(0.95);
+}
+
+.teleopButton:nth-child(1) { grid-area: up; }
+.teleopButton:nth-child(2) { grid-area: left; }
+.teleopButton:nth-child(3) { grid-area: center; }
+.teleopButton:nth-child(4) { grid-area: right; }
+.teleopButton:nth-child(5) { grid-area: down; }
+
+.velocityDisplay {
+  display: flex;
+  gap: 2rem;
+  font-family: monospace;
+  font-size: 1.1rem;
+}
+
+.jointControls {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.jointControl {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.jointControl label {
+  font-weight: bold;
+  color: #495057;
+}
+
+.jointSlider {
+  width: 100%;
+  margin-bottom: 0.25rem;
+}
+
+.jointValue {
+  text-align: center;
+  font-family: monospace;
+  font-size: 0.9rem;
+  color: #6c757d;
+}
+
+.navControls {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.navInput {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.navInput label {
+  font-weight: bold;
+  color: #495057;
+}
+
+.navInput input[type="range"] {
+  width: 100%;
+}
+
+.navButton {
+  padding: 0.75rem 1.5rem;
+  background: #28a745;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: background 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  align-self: flex-start;
+}
+
+.navButton:hover {
+  background: #218838;
+}
+
+.statusPanel {
+  padding: 1rem;
+  background: #f8f9fa;
+  border-top: 1px solid #e0e0e0;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.statusRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.statusItem {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.statusLabel {
+  font-weight: bold;
+  color: #495057;
+}
+
+.statusValue {
+  font-weight: 600;
+}
+
+.statusButton {
+  padding: 0.5rem 1rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.connectButton {
+  background: #28a745;
+  color: white;
+  border-color: #28a745;
+}
+
+.connectButton:hover {
+  background: #218838;
+  border-color: #1e7e34;
+}
+
+.disconnectButton {
+  background: #dc3545;
+  color: white;
+  border-color: #dc3545;
+}
+
+.disconnectButton:hover {
+  background: #c82333;
+  border-color: #bd2130;
+}
+
+.controlsInfo {
+  padding: 0 1rem 1rem 1rem;
+}
+
+.controlsDetails {
+  cursor: pointer;
+}
+
+.controlsDetailsContent {
+  margin-top: 0.5rem;
+  padding-top: 0.5rem;
+  border-top: 1px solid #eee;
+}
+
+.controlsDetailsContent p {
+  margin: 0.5rem 0;
+}
+
+@media (max-width: 768px) {
+  .teleopPad {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    width: 200px;
+    height: 200px;
+  }
+
+  .teleopButton {
+    width: 100%;
+    height: 100%;
+  }
+
+  .statusRow {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .modeButton {
+    min-width: 100px;
+    padding: 0.5rem;
+    font-size: 0.8rem;
+  }
+
+  .velocityDisplay {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}

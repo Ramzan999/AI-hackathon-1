@@ -1,0 +1,287 @@
+/**
+ * Copyright (c) 2017-present, Facebook, Inc.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+/* You can override the default Docusaurus variables here. */
+:root {
+  --ifm-color-primary: #1a73e8; /* Robotics blue */
+  --ifm-color-primary-dark: #1557b0;
+  --ifm-color-primary-darker: #1452a3;
+  --ifm-color-primary-darkest: #104080;
+  --ifm-color-primary-light: #4285f4;
+  --ifm-color-primary-lighter: #669df6;
+  --ifm-color-primary-lightest: #8ab8ff;
+  --ifm-color-secondary: #3cba54; /* Robotics green */
+  --ifm-color-secondary-dark: #2e8f41;
+  --ifm-color-secondary-darker: #2b863d;
+  --ifm-color-secondary-darkest: #226c31;
+  --ifm-color-secondary-light: #4bc463;
+  --ifm-color-secondary-lighter: #65ce7c;
+  --ifm-color-secondary-lightest: #7fd895;
+  --ifm-code-font-size: 95%;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+
+  /* Robotics-themed colors */
+  --robotics-accent: #ff6d01; /* Orange for robotics highlights */
+  --robotics-dark: #263238; /* Dark gray for backgrounds */
+  --robotics-light: #f5f5f5; /* Light gray for content areas */
+  --robotics-border: #bdbdbd; /* Medium gray for borders */
+}
+
+/* For readability concerns, you should choose a lighter palette in dark mode. */
+[data-theme='dark'] {
+  --ifm-color-primary: #4285f4;
+  --ifm-color-primary-dark: #1557b0;
+  --ifm-color-primary-darker: #1452a3;
+  --ifm-color-primary-darkest: #104080;
+  --ifm-color-primary-light: #5a95f5;
+  --ifm-color-primary-lighter: #84aef7;
+  --ifm-color-primary-lightest: #add5f9;
+  --ifm-background-color: #121212;
+  --ifm-background-surface-color: #1e1e1e;
+  --ifm-navbar-background-color: #1e1e1e;
+  --ifm-footer-background-color: #263238;
+
+  /* Robotics-themed dark mode colors */
+  --robotics-accent: #ff8a00;
+  --robotics-dark: #1a1a1a;
+  --robotics-light: #2d2d2d;
+  --robotics-border: #4a4a4a;
+}
+
+/* Custom robotics-themed styling */
+
+/* Header and navigation */
+.navbar {
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  border-bottom: 1px solid var(--robotics-border);
+}
+
+.navbar__title {
+  font-weight: 600;
+  color: var(--ifm-color-primary);
+}
+
+/* Hero banner styling */
+.hero--primary {
+  background: linear-gradient(135deg, #1a237e 0%, #283593 50%, #1a73e8 100%);
+  color: white;
+}
+
+.hero__title {
+  font-family: 'Roboto', 'Arial', sans-serif;
+  font-weight: 700;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+.hero__subtitle {
+  text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+}
+
+/* Buttons */
+.button--secondary {
+  background-color: var(--ifm-color-secondary);
+  border-color: var(--ifm-color-secondary);
+}
+
+.button--secondary:hover {
+  background-color: var(--ifm-color-secondary-dark);
+  border-color: var(--ifm-color-secondary-dark);
+}
+
+/* Cards and content blocks */
+.card {
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+/* Code blocks */
+.codeBlockContainer_node_modules-\@docusaurus-theme-classic-lib-theme-CodeBlock-Container-styles-module {
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* Admonitions (callouts) */
+.admonition {
+  border-left-width: 4px;
+  border-radius: 0 4px 4px 0;
+}
+
+.admonition-note {
+  border-left-color: var(--ifm-color-primary);
+}
+
+.admonition-tip {
+  border-left-color: var(--ifm-color-secondary);
+}
+
+.admonition-caution {
+  border-left-color: var(--robotics-accent);
+}
+
+/* Tables */
+.table-wrapper {
+  overflow-x: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+  width: 100%;
+}
+
+th, td {
+  padding: 0.75rem;
+  text-align: left;
+  border-bottom: 1px solid var(--robotics-border);
+}
+
+th {
+  background-color: var(--robotics-light);
+  font-weight: 600;
+}
+
+/* Sidebar */
+.menu {
+  padding: 1rem;
+}
+
+.menu__list-item-collapsible .menu__link--sublist {
+  font-weight: 600;
+  color: var(--ifm-color-primary);
+}
+
+/* Footer */
+.footer {
+  background-color: var(--robotics-dark);
+  color: white;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.footer__title {
+  color: var(--ifm-color-primary-lightest);
+}
+
+.footer__link-item {
+  color: var(--ifm-color-primary-lighter);
+}
+
+.footer__link-item:hover {
+  color: var(--ifm-color-primary-lightest);
+}
+
+/* Custom robotics icons and elements */
+.robotics-icon {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background-color: var(--robotics-accent);
+  border-radius: 50%;
+  margin-right: 0.5rem;
+  vertical-align: middle;
+}
+
+/* Section dividers */
+.section-divider {
+  height: 1px;
+  background: linear-gradient(to right, transparent, var(--robotics-border), transparent);
+  margin: 2rem 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 996px) {
+  .hero--primary {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+
+  .navbar__items--right {
+    display: flex;
+    align-items: center;
+  }
+}
+
+/* Accessibility improvements */
+a:focus,
+button:focus,
+input:focus,
+textarea:focus,
+select:focus,
+details:focus,
+summary:focus {
+  outline: 2px solid var(--ifm-color-primary);
+  outline-offset: 2px;
+}
+
+/* Print styles */
+@media print {
+  .navbar,
+  .footer,
+  .pagination-nav {
+    display: none;
+  }
+
+  .container {
+    max-width: 100% !important;
+  }
+}
+
+/* Custom styles for robotics documentation */
+.robotics-diagram {
+  border: 1px solid var(--robotics-border);
+  border-radius: 8px;
+  margin: 20px 0;
+  padding: 15px;
+  text-align: center;
+  background-color: var(--ifm-background-color);
+}
+
+.code-block-robotics {
+  background-color: var(--robotics-light);
+  border-left: 4px solid var(--ifm-color-primary);
+}
+
+.ros-node {
+  display: inline-block;
+  background-color: var(--robotics-light);
+  border: 1px solid var(--ifm-color-primary);
+  border-radius: 4px;
+  padding: 2px 6px;
+  margin: 0 2px;
+  font-family: monospace;
+  color: var(--ifm-color-primary-darkest);
+}
+
+/* Custom admonitions for robotics-specific content */
+.admonition.admonition-caution {
+  border-color: var(--robotics-accent);
+}
+
+.admonition.admonition-safety {
+  border-color: #d32f2f;
+  background-color: #ffebee;
+}
+
+.admonition-safety .admonition-heading {
+  color: #d32f2f;
+}
+
+/* Responsive adjustments for code blocks */
+@media (max-width: 768px) {
+  .code-block-robotics {
+    font-size: 0.85em;
+    overflow-x: auto;
+  }
+}

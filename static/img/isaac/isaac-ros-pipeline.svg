@@ -1,0 +1,64 @@
+<svg width="900" height="500" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .node { fill: #FF9800; stroke: #F57C00; stroke-width: 2; }
+    .gpu { fill: #9C27B0; stroke: #7B1FA2; stroke-width: 2; }
+    .ros { fill: #2196F3; stroke: #0D47A1; stroke-width: 2; }
+    .data { fill: #4CAF50; stroke: #388E3C; stroke-width: 2; }
+    .text { font-family: Arial, sans-serif; font-size: 14px; fill: white; text-anchor: middle; }
+    .label { font-family: Arial, sans-serif; font-size: 12px; fill: #333; text-anchor: middle; }
+  </style>
+
+  <!-- GPU Acceleration Block -->
+  <rect class="gpu" x="50" y="50" width="800" height="400" rx="20" ry="20" fill-opacity="0.1" stroke-width="3"/>
+  <text class="label" x="450" y="470">NVIDIA GPU Acceleration</text>
+
+  <!-- ROS Nodes -->
+  <rect class="ros" x="100" y="100" width="120" height="60" rx="10" ry="10"/>
+  <text class="text" x="160" y="135">Camera</text>
+
+  <rect class="ros" x="100" y="200" width="120" height="60" rx="10" ry="10"/>
+  <text class="text" x="160" y="235">LiDAR</text>
+
+  <rect class="ros" x="100" y="300" width="120" height="60" rx="10" ry="10"/>
+  <text class="text" x="160" y="335">IMU</text>
+
+  <!-- Isaac ROS Nodes -->
+  <rect class="node" x="350" y="100" width="160" height="60" rx="10" ry="10"/>
+  <text class="text" x="430" y="125">Image</text>
+  <text class="text" x="430" y="145">Processing</text>
+
+  <rect class="node" x="350" y="200" width="160" height="60" rx="10" ry="10"/>
+  <text class="text" x="430" y="225">DNN</text>
+  <text class="text" x="430" y="245">Inference</text>
+
+  <rect class="node" x="350" y="300" width="160" height="60" rx="10" ry="10"/>
+  <text class="text" x="430" y="325">Sensor</text>
+  <text class="text" x="430" y="345">Fusion</text>
+
+  <!-- Perception Output -->
+  <rect class="node" x="650" y="200" width="140" height="60" rx="10" ry="10"/>
+  <text class="text" x="720" y="225">Perception</text>
+  <text class="text" x="720" y="245">Pipeline</text>
+
+  <!-- Data Flow Arrows -->
+  <line x1="220" y1="130" x2="350" y2="130" stroke="#000" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <line x1="220" y1="230" x2="350" y2="230" stroke="#000" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <line x1="220" y1="330" x2="350" y2="330" stroke="#000" stroke-width="2" marker-end="url(#arrowhead)"/>
+
+  <line x1="510" y1="130" x2="650" y2="230" stroke="#000" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <line x1="510" y1="230" x2="650" y2="230" stroke="#000" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <line x1="510" y1="330" x2="650" y2="230" stroke="#000" stroke-width="2" marker-end="url(#arrowhead)"/>
+
+  <!-- Arrowhead definition -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#000" />
+    </marker>
+  </defs>
+
+  <!-- Labels -->
+  <text class="label" x="160" y="80">ROS 2 Sensors</text>
+  <text class="label" x="430" y="80">Isaac ROS Processing</text>
+  <text class="label" x="720" y="80">Perception Output</text>
+  <text class="label" x="450" y="30">Isaac ROS Pipeline Architecture</text>
+</svg>

@@ -1,0 +1,195 @@
+.simulatorContainer {
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  overflow: hidden;
+  margin: 1.5rem 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  background: white;
+}
+
+.simulatorHeader {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 1rem;
+}
+
+.simulatorTitle {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.simulatorIcon {
+  font-size: 1.2rem;
+}
+
+.simulatorBadge {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  padding: 0.25rem 0.5rem;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+.simulatorDescription {
+  margin: 0;
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+
+.simulatorContent {
+  padding: 1rem;
+}
+
+.simulationFrame {
+  border: 1px solid #ddd;
+  borderRadius: 4px;
+  overflow: hidden;
+  position: relative;
+  minHeight: 400px;
+}
+
+.simulationIframe {
+  width: 100%;
+  height: 400px;
+  border: none;
+}
+
+.placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 400px;
+  background: #f5f5f5;
+  border: 2px dashed #ddd;
+  border-radius: 4px;
+  text-align: center;
+  color: #666;
+}
+
+.placeholderIcon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.placeholderSubtext {
+  font-size: 0.9rem;
+  color: #888;
+  margin-top: 0.5rem;
+}
+
+.simulatorControls {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  background: #f8f9fa;
+  border-top: 1px solid #e0e0e0;
+}
+
+.controlButton {
+  padding: 0.5rem 1rem;
+  border: 1px solid #ddd;
+  background: white;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: all 0.2s ease;
+}
+
+.controlButton:hover {
+  background: #e9ecef;
+  border-color: #adb5bd;
+}
+
+.controlButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.playButton {
+  background: #28a745;
+  color: white;
+  border-color: #28a745;
+}
+
+.playButton:hover:not(:disabled) {
+  background: #218838;
+  border-color: #1e7e34;
+}
+
+.resetButton {
+  background: #dc3545;
+  color: white;
+  border-color: #dc3545;
+}
+
+.resetButton:hover {
+  background: #c82333;
+  border-color: #bd2130;
+}
+
+.simulationStatus {
+  margin-left: auto;
+  font-size: 0.9rem;
+}
+
+.statusIndicator {
+  padding: 0.25rem 0.5rem;
+  border-radius: 12px;
+  font-size: 0.8rem;
+}
+
+.statusActive {
+  background: #d4edda;
+  color: #155724;
+}
+
+.statusInactive {
+  background: #f8d7da;
+  color: #721c24;
+}
+
+.simulatorInfo {
+  padding: 0 1rem 1rem 1rem;
+}
+
+.simulatorDetails {
+  cursor: pointer;
+}
+
+.simulatorDetailsContent {
+  margin-top: 0.5rem;
+  padding-top: 0.5rem;
+  border-top: 1px solid #eee;
+}
+
+.errorContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 400px;
+  background: #f8d7da;
+  color: #721c24;
+  text-align: center;
+  padding: 1rem;
+}
+
+@media (max-width: 768px) {
+  .simulatorControls {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .simulationIframe {
+    height: 300px;
+  }
+
+  .placeholder {
+    height: 300px;
+  }
+}
