@@ -7,18 +7,18 @@ This guide provides detailed instructions for setting up and running the RAG Cha
 The system requires the following API keys and configuration:
 
 ### Qdrant Configuration
-- **URL**: `your-qdrant-url`
-- **API Key**: `your-qdrant-api-key`
+- **URL**: `your_qdrant_url_here`
+- **API Key**: `your_qdrant_api_key_here`
 
 ### Neon Database URL
-- `your-neon-database-url`
+- `your_neon_database_url_here`
 
 ### OpenRouter Configuration
-- **API Key**: `your-openrouter-api-key`
+- **API Key**: `your_openrouter_api_key_here`
 - **Base URL**: `https://openrouter.ai/api/v1`
 
 ### Qwen API Key
-- `your-qwen-api-key`
+- `your_qwen_api_key_here`
 
 ⚠️ **Important Security Notice**: These API keys should be stored securely and never committed to version control. In a production environment, use environment variables or a secure secrets management system.
 
